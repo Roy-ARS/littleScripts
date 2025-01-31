@@ -1,3 +1,5 @@
+#Hecho para el curso organización de computadoras
+#transforma los 0 en la variable negativa y 1 en la variable positiva
 def main ():
 
     while True:
