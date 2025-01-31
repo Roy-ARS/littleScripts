@@ -1,4 +1,6 @@
-#Realiza la división euclideana vista en el curso de matemáticas y muestra el procedimiento paso por paso
+#Realiza la división euclideana vista en el curso de matemáticas
+#muestra el procedimiento paso por paso
+#muestra el Mínimo Común Múltiplo de los números dados
 def main():
     a = int(input("Define a: "))
     b = int(input("Define b: "))
