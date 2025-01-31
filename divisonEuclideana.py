@@ -1,18 +1,9 @@
+#Realiza la división euclideana vista en el curso de matemáticas y muestra el procedimiento paso por paso
 def main():
     a = int(input("Define a: "))
     b = int(input("Define b: "))
     mcd, interactions = divide_euc(a, b, -1)
     print("MCD = " + str(mcd))
-    desenredados = []
-    ecus = []
-
-    if input("quiere desenredar el algoritmo? y/n ") == "y":
-
-        desenredados = desenredar(a, b, mcd, interactions, ecus)
-        #print(desenredados)
-
-    else:
-        pass
 
 
 def divide_euc(a, b, inter):
@@ -27,29 +18,6 @@ def divide_euc(a, b, inter):
         inter += 1
         return divide_euc(b, r, inter)
 
-############ Desenredando el algoritmo de euclides
-def desenredar(a, b, mcd, interactions, ecus):
-    q = a // b
-    r = a % b
-    ecuaciones = ecus
-    if r != 0:
-        ecuaciones = ecuaciones.append(str(r) + " = " + str(a) + " - " + str(q) + " (" + str(b) + ")")
-        print(str(r) + " = " + str(a) + " - " + str(q) + "(" + str(b) + ")")
-        return desenredar(b, r, mcd, interactions, ecus)
-    else:
-        valores = ecuaciones[interactions].split()
-        valores[5] = valores[5].replace("(", "").replace(")", "")
-        print(f"{valores}")
-        for i in range(0, interactions):
-            valores[5] = ecuaciones[interactions-1]
-            i += 1
-        print(f"{valores}")
-        #print(valores)
-        pass#print(desenredar(b, r, mcd))
-    #primera = str(r) + " = " + str(a) + " - " + str(q) + " (" + str(b) + ")"
-    #segunda = str(b % r) + " = " + str(b) + " - " + str(b // r) + " (" + str(r) + ")"
-    #print(primera)
-    #print(segunda)
 
 
 
