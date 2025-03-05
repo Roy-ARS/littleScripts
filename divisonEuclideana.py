@@ -4,11 +4,11 @@
 def main():
     a = int(input("Define a: "))
     b = int(input("Define b: "))
-    mcd, interactions = divide_euc(a, b, -1)
+    mcd = divide_euc(a, b)
     print("MCD = " + str(mcd))
 
 
-def divide_euc(a, b, inter):
+def divide_euc(a, b):
     q = a // b
     r = a % b
     print(f"{a}/{b} = {q}   r = {r}     {a} = {q}({b}) + {r}")
@@ -17,8 +17,7 @@ def divide_euc(a, b, inter):
             print("Los números son coprimos.")
         return b, inter
     else:
-        inter += 1
-        return divide_euc(b, r, inter)
+        return divide_euc(b, r)
 
 
 
