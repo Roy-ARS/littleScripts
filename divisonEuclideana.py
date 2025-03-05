@@ -15,7 +15,7 @@ def divide_euc(a, b):
     if r == 0:
         if b == 1:
             print("Los números son coprimos.")
-        return b, inter
+        return b
     else:
         return divide_euc(b, r)
 
